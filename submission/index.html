@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Google Search Ranking & Discoverability Capstone</title>
+
+<style>
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f6f9;
+margin:0;
+padding:40px;
+color:#333;
+line-height:1.8;
+}
+
+.container{
+max-width:950px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 0 15px rgba(0,0,0,.08);
+}
+
+h1,h2{
+color:#0056b3;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+margin-bottom:20px;
+}
+
+table,th,td{
+border:1px solid #ddd;
+}
+
+th{
+background:#0056b3;
+color:white;
+padding:10px;
+}
+
+td{
+padding:10px;
+}
+
+.code{
+background:#f0f0f0;
+padding:15px;
+border-radius:8px;
+font-family:monospace;
+}
+
+.footer{
+margin-top:50px;
+text-align:center;
+font-size:14px;
+color:gray;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Identifying Web Pages That Require Content Refresh Using Machine Learning</h1>
+
+<p>
+<b>Machine Learning Capstone</b><br>
+FlyRank Machine Learning Internship
+</p>
+
+<hr>
+
+<h2>Abstract</h2>
+
+<p>
+
+Search engine visibility changes over time because user interests and content freshness continuously evolve.
+
+This project develops a machine learning model that identifies web pages requiring content updates using search performance signals.
+
+A Random Forest classifier was trained using historical search metrics including impressions, clicks, sessions, CTR, average position, engagement rate, and freshness indicators.
+
+The model predicts which pages are most likely to benefit from a content refresh.
+
+These predictions can help content teams prioritize optimization efforts using a data-driven approach.
+
+</p>
+
+<h2>Introduction</h2>
+
+<p>
+
+Maintaining high search rankings requires continuous content improvement.
+
+Reviewing thousands of pages manually is inefficient and time-consuming.
+
+Machine learning offers a scalable solution by analyzing historical search performance and identifying pages that should be updated first.
+
+</p>
+
+<h2>Research Question</h2>
+
+<p>
+
+Can machine learning accurately identify web pages that require content updates using search performance indicators?
+
+</p>
+
+<h2>Dataset</h2>
+
+<p>
+
+Dataset Used:
+
+<b>content_refresh_anonymized</b>
+
+</p>
+
+<table>
+
+<tr>
+<th>Dataset Size</th>
+<td>30,000 Records</td>
+</tr>
+
+<tr>
+<th>Target</th>
+<td>Content Refresh Prediction</td>
+</tr>
+
+<tr>
+<th>Training Split</th>
+<td>80%</td>
+</tr>
+
+<tr>
+<th>Testing Split</th>
+<td>20%</td>
+</tr>
+
+</table>
+
+<h2>Features Used</h2>
+
+<ul>
+
+<li>Search Volume</li>
+
+<li>Competition</li>
+
+<li>Word Count</li>
+
+<li>Impressions</li>
+
+<li>Clicks</li>
+
+<li>Sessions</li>
+
+<li>CTR</li>
+
+<li>Average Position</li>
+
+<li>Engagement Rate</li>
+
+<li>Content Age</li>
+
+<li>Days Since Last Update</li>
+
+</ul>
+
+<h2>Methodology</h2>
+
+<ol>
+
+<li>Load dataset.</li>
+
+<li>Remove missing target values.</li>
+
+<li>Select numerical features.</li>
+
+<li>Split the data into training and testing sets.</li>
+
+<li>Train a Random Forest classifier.</li>
+
+<li>Generate predictions.</li>
+
+<li>Evaluate model performance.</li>
+
+</ol>
+
+<h2>Model</h2>
+
+<p>
+
+Algorithm:
+
+<b>Random Forest Classifier</b>
+
+</p>
+
+<p>
+
+The model was selected because it performs well on structured datasets, handles nonlinear relationships, and requires minimal preprocessing.
+
+</p>
+
+<h2>Validation</h2>
+
+<ul>
+
+<li>Train/Test Split: 80/20</li>
+
+<li>Random State: 42</li>
+
+<li>Evaluation on unseen testing data</li>
+
+</ul>
+
+<h2>Results</h2>
+
+<p>
+
+The model successfully identified pages requiring content refresh using historical search performance signals.
+
+Evaluation included:
+
+</p>
+
+<ul>
+
+<li>Accuracy</li>
+
+<li>Precision</li>
+
+<li>Recall</li>
+
+<li>F1 Score</li>
+
+<li>Confusion Matrix</li>
+
+</ul>
+
+<p>
+
+The results demonstrate that search performance metrics provide meaningful indicators for prioritizing content updates.
+
+</p>
+
+<h2>Limitations</h2>
+
+<ul>
+
+<li>Some records contained missing values.</li>
+
+<li>The model identifies statistical patterns rather than causal relationships.</li>
+
+<li>Additional semantic features could further improve prediction quality.</li>
+
+</ul>
+
+<h2>Ranked Recommendations</h2>
+
+<ol>
+
+<li>Refresh pages with declining CTR.</li>
+
+<li>Prioritize pages showing lower impressions.</li>
+
+<li>Review pages with decreasing sessions.</li>
+
+<li>Update aging content.</li>
+
+<li>Improve pages with weak engagement.</li>
+
+</ol>
+
+<h2>Conclusion</h2>
+
+<p>
+
+Machine learning provides an efficient method for identifying web pages that should be refreshed.
+
+The developed Random Forest model supports data-driven decision making and helps prioritize optimization efforts for improved search visibility.
+
+</p>
+
+<h2>Reproducibility</h2>
+
+<ul>
+
+<li>Capstone Notebook</li>
+
+<li>Source Code</li>
+
+<li>Research Paper</li>
+
+<li>GitHub Repository</li>
+
+</ul>
+
+<h2>Acknowledgments</h2>
+
+<p>
+
+Built on the FlyRank Machine Learning Internship Dataset.
+
+</p>
+
+<div class="footer">
+
+© 2026 FlyRank Machine Learning Internship Capstone
+
+</div>
+
+</div>
+
+</body>
+</html>
